@@ -1,0 +1,9 @@
+com\liga\modelo\Titular.class
+com\liga\modelo\Equipo.class
+com\liga\servicios\PartidoService.class
+com\liga\util\CSVExporter.class
+com\liga\interfaces\Exportable.class
+com\liga\servicios\LigaService.class
+com\liga\Main.class
+com\liga\modelo\Jugador.class
+com\liga\modelo\Suplente.class
