@@ -50,7 +50,6 @@ public class Main {
         System.out.println("0. Salir");
     }
 
-    // ---- Opciones del menú ----
     private static void crearEquipo() {
         String nombreEq = leerString("Nombre del equipo: ");
         Equipo eq = new Equipo(nombreEq);
@@ -122,7 +121,6 @@ public class Main {
         System.out.println(rep.reporteEquipo(eq));
     }
 
-    // ---- Helpers de lectura ----
     private static String leerString(String msg) {
         System.out.print(msg);
         return sc.nextLine();
@@ -132,7 +130,6 @@ public class Main {
         return Integer.parseInt(sc.nextLine());
     }
 
-    // ---- Helpers de selección ----
     private static Equipo seleccionarEquipo(String prompt) {
         System.out.println(prompt + ":");
         for (int i = 0; i < liga.getEquipos().size(); i++)

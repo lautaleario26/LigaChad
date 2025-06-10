@@ -1,24 +1,24 @@
 package com.liga.modelo;
 
 public class Titular extends Jugador {
-    private int MinutosJugados;
+    private int minutosJugados;   // camelCase
 
-    public Titular(String nombre, int edad){
+    public Titular(String nombre, int edad) {
         super(nombre, edad);
-        this.MinutosJugados = 0;
+        this.minutosJugados = 0;
     }
 
     @Override
-    public String getTipo(){
-        return "Titular";
+    public String getTipo() { 
+        return "Titular"; 
     }
 
-    public void sumarMinutos(int minutos){
-        MinutosJugados += minutos;
+    public void sumarMinutos(int minutos) { 
+        minutosJugados += minutos; 
     }
 
-    public int getminutosJugados(){
-        return MinutosJugados;
+    public int getMinutosJugados() { 
+        return minutosJugados; 
     }
-    
 }
+

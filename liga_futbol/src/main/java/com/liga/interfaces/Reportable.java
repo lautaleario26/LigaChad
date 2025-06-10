@@ -1,6 +1,6 @@
 package com.liga.interfaces;
 
-public class Reportable {
+public interface Reportable {
     String generarReporte();
-    
 }
+
