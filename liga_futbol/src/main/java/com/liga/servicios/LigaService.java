@@ -53,15 +53,23 @@ public class LigaService {
                 .max(Comparator.comparingInt(Titular::getMinutosJugados))
                 .orElse(null);
     }
-
-    public void transferirJugador(Jugador j, Equipo origen, Equipo destino) {
-        if (origen.getJugadores().remove(j)) {
+        public void transferirJugador(Jugador j, Equipo origen, Equipo destino) {
+        if  (origen.getJugadores().contains(j)) {
+            origen.eliminarJugador(j);
             destino.agregarJugador(j);
-        } else {
+        }   else  {
             throw new IllegalArgumentException("El jugador no pertenece al equipo de origen");
         }
     }
 
-    public List<Equipo> getEquipos()   { return equipos; }
-    public List<Partido> getPartidos() { return partidos; }
+
+    
+
+
+    public List<Equipo> getEquipos()   { 
+        return equipos; 
+    }
+    public List<Partido> getPartidos() { 
+        return partidos; 
+    }
 }

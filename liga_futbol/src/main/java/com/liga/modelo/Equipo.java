@@ -1,8 +1,6 @@
 package com.liga.modelo;
 
 import java.util.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Equipo {
     private String nombre;
@@ -41,8 +39,13 @@ public class Equipo {
     public double getPromedioGoles(){
         return partidosJugados == 0 ? 0 : (double) golesAnotadosTotales / partidosJugados;
     }
+    public void eliminarJugador(Jugador j) {
+    plantilla.remove(j);
+    }
 
-    
+
+  
+ 
 
 
 
