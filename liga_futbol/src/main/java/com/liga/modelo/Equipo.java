@@ -9,46 +9,43 @@ public class Equipo {
     private int golesAnotadosTotales = 0;
     private int partidosJugados = 0;
 
-    public Equipo(String nombre) {
-        this.nombre = nombre;
+    public Equipo(String nombre) { 
+        this.nombre = nombre; 
     }
-    public String getNombre(){
-        return nombre;
-    }
-    public List<Jugador> getJugadores(){
-        return Collections.unmodifiableList(plantilla);
 
+    public String getNombre() { 
+        return nombre; 
     }
-    public void agregarJugador(Jugador j){
-        plantilla.add(j);
+
+    public List<Jugador> getJugadores() { 
+        return Collections.unmodifiableList(plantilla); 
     }
-    public void registrarGol(Jugador j){
-        if (!plantilla.contains(j)) throw new IllegalArgumentException("El jugador noo pertenece al equipo");
+
+    public void agregarJugador(Jugador j)   { 
+        plantilla.add(j); 
+    }
+    public boolean tieneJugador(Jugador j) { 
+        return plantilla.contains(j); 
+    }
+    public void removerJugador(Jugador j)   { 
+        plantilla.remove(j); 
+    }
+
+    public void registrarGol(Jugador j) {
+        if (!tieneJugador(j)) throw new IllegalArgumentException("El jugador no pertenece al equipo");
         j.anotarGol();
         golesAnotadosTotales++;
     }
-    public void sumarPartido(){
-        partidosJugados++;
+    public void sumarPartido() { 
+        partidosJugados++; 
     }
-    public int getGolesTotales(){
-        return golesAnotadosTotales;
+    public int  getGolesTotales()   { 
+        return golesAnotadosTotales; 
     }
-    public int getPartidosJugados(){
-        return partidosJugados;
+    public int  getPartidosJugados(){ 
+        return partidosJugados; 
     }
-    public double getPromedioGoles(){
-        return partidosJugados == 0 ? 0 : (double) golesAnotadosTotales / partidosJugados;
+    public double getPromedioGoles(){ 
+        return partidosJugados==0?0:(double)golesAnotadosTotales/partidosJugados; 
     }
-    public void eliminarJugador(Jugador j) {
-    plantilla.remove(j);
-    }
-
-
-  
- 
-
-
-
-
-    
 }
